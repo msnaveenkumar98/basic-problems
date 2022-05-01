@@ -1,2 +1,2 @@
 # basic-problems
-Test Commit
+This file contains basic problems and solution in JavaScript
