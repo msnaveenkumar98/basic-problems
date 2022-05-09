@@ -10,13 +10,13 @@
 // 10. What are the values are falsy values?
 
 function isNumber(value) {
-  if ("number " === "number") {
+  if (typeof value === "number") {
     return true;
   } else {
     return false;
   }
 }
-console.log("Number");
+console.log("Number : ");
 console.log("8 = " + isNumber(8));
 console.log("hi = " + isNumber("hi")); 
 
@@ -27,7 +27,7 @@ function isBoolean(value) {
     return false;
   }
 }
-console.log("Boolean");
+console.log("Boolean : ");
 console.log("true = " + isBoolean(true));
 console.log("9 = " + isBoolean(9));
 
@@ -38,7 +38,7 @@ function isString(value) {
     return false;
   }
 }
-console.log("String");
+console.log("String : ");
 console.log(' "9" ='+ isString("9"));
 console.log("9 = " + isString(9));
 
@@ -49,9 +49,9 @@ function isObject(value) {
     return false;
   }
 }
-console.log("Object");
-console.log("{} = " +isObject({}));
-console.log(" 9 = " +isObject(9));
+console.log("Object : ");
+console.log("{} = " + isObject({}));
+console.log(" 9 = " + isObject(9));
 
 function isFunction(value) {
   if (typeof value === "function") {
@@ -60,9 +60,9 @@ function isFunction(value) {
     return false;
   }
 }
-console.log("");
-console.log(isFunction(function () {}));
-console.log(isFunction("8"));
+console.log("functions : ");
+console.log("function () {} = " + isFunction( function () {}));
+console.log(' "8"= ' + isFunction("8"));
 
 function isArrayValue(value) {
   if (Array.isArray(value)) {
@@ -71,9 +71,11 @@ function isArrayValue(value) {
     return false;
   }
 }
-console.log(isArrayValue([]));
-console.log(isArrayValue(6));
+console.log("Array : ");
+console.log("[] = " + isArrayValue([]));
+console.log("6 = "+ isArrayValue(6));
 
+debugger;
 function isDate(value) {
   if (value instanceof Date) {
     return true;
@@ -81,11 +83,14 @@ function isDate(value) {
     return false;
   }
 }
-console.log(isDate(new Date(1995, 11, 17)));
-console.log(isDate(0));
+console.log("Date : ");
+console.log("new Date(1995, 11, 17) = " + isDate(new Date(1995, 11, 17)));
+console.log("0 = " + isDate(0));
 
-//TRUTHY VALUES :
-1, new Date(), function () {}, [], true, {}, "hello";
+// //TRUTHY VALUES :
+// 1, new Date(), function () {}, [], true, {}, "hello";
 
-//FALSY VALUES :
-undefined, null, NaN, 0, -0, "", false;
+// //FALSY VALUES :
+// undefined, null, NaN, 0, -0, "", false;
+
+//"new Date(1995, 11, 17) = ")
