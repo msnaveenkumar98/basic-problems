@@ -70,3 +70,4 @@ getValues(days);
 // for(const x of words){
 //     console.log(x);
 // }
+
